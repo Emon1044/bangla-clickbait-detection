@@ -49,26 +49,7 @@ The current notebook is configured for **Kaggle**, with a GPU accelerator (the o
 
 The notebook deliberately avoids reinstalling PyTorch in the Kaggle environment to reduce the risk of breaking the preconfigured CUDA/PyTorch installation. For local execution, adapt the data paths and install a PyTorch build compatible with the machine's CUDA/CPU environment before running the experiments.
 
-## Recommended repository layout
 
-```text
-bangla-clickbait-detection/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── requirements-kaggle.txt
-├── notebooks/
-│   └── banglabait_clickbait_detection.ipynb
-├── results/
-│   ├── model_comparison.csv
-│   ├── model_comparison.png
-│   ├── confusion_matrix_ensemble.png
-│   └── error_analysis.md
-└── docs/
-    └── methodology.md
-```
-
-Add the files under `results/` only after exporting the corresponding outputs from the notebook. Keep this repository focused on small, useful artifacts rather than committing every intermediate file or model checkpoint. If the project grows beyond a research notebook, move reusable preprocessing, training, and evaluation functions into a `src/` package and add automated tests under `tests/`.
 
 ## Reproducibility and evaluation notes
 
